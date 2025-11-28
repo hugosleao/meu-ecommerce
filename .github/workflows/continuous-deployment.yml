@@ -13,10 +13,10 @@ jobs:
       id-token: write
     steps:
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v5.1.0
+      uses: aws-actions/configure-aws-credentials@v4
       with:
+        role-to-assume: arn:aws:iam::471112662456:role/meu-ecommerce-github-frontend-role
         aws-region: us-east-1
-        role-to-assume: arn:aws:iam::968225077300:role/nsse-github-frontend-role
 
     - uses: actions/download-artifact@v5
       with:
